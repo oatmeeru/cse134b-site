@@ -64,10 +64,18 @@
                         a companion site for a game (genshin) where it would be
                         useful to have an interactive database for the modularly
                         structured information on the game's characters,
-                        weapons, items, etc. easier/faster access to information
+                        weapons, items, etc.
+                        <strong>easier/faster access</strong> to information
                         than the built in ui of the game (could also include
                         information that is not immediately accessible in game).
-                        leverages a pre-existing api (enka) for most assets.
+                        leverages a <em>pre-existing api</em> (enka) for most
+                        assets.
+                        <li>
+                            <a
+                                href="https://github.com/yuko1101/enka-network-api"
+                                >link to what i used</a
+                            >
+                        </li>
                     </p>
 
                     <blockquote>
@@ -111,22 +119,24 @@
 
                 <section>
                     <h3>
-                        <li><a href="./game-data.html"> Game Data </a></li>
+                        <li><a href="./game-data.html">Game Data</a></li>
                     </h3>
-                    <p>
-                        this part of the site will display a bunch of static
-                        information about characters, weapons, and artifacts
-                        (another type of of 'equipment').
-                    </p>
-                    <h4>Characters</h4>
-                    <p>text</p>
-                    <h4>Weapons</h4>
-                    <p>text</p>
-                    <h4>Artifacts</h4>
-                    <p>text</p>
+                    <details>
+                        <summary>
+                            this part of the site will display a bunch of static
+                            information about characters, weapons, and artifacts
+                            (another type of of 'equipment').
+                        </summary>
+                        <h4>Characters</h4>
+                        <p>text</p>
+                        <h4>Weapons</h4>
+                        <p>text</p>
+                        <h4>Artifacts</h4>
+                        <p>text</p>
+                    </details>
 
                     <h3>
-                        <li><a href="./user-fetch.html"> User Fetch </a></li>
+                        <li><a href="./user-fetch.html">User Fetch</a></li>
                     </h3>
                     <p>
                         this part of the site will be dynamically fetched by the
@@ -141,7 +151,9 @@
                     <p>
                         the thing that made me want to do this project. i want
                         to use the enka api to be able to do stuff like this
-                        <li><a href="https://enka.network/">home</a></li>
+                        <li>
+                            <a href="https://enka.network/">enka.network</a>
+                        </li>
                     </p>
                     <p>
                         i retrieve the response from my api calls as a
@@ -206,23 +218,22 @@ async function parseArtifact(uid: number, artifact: any) {
 
                     <h3>
                         <li>
-                            <a href="./lore-content.html"> Lore Content </a>
+                            <a href="./lore-content.html">Lore Content</a>
                         </li>
                     </h3>
                     <p>
                         this part of the site will give the user a way to access
                         quest logs and item descriptions (the flavor text part).
                         additionally, if possible, i want to use it to store the
-                        voiced audio files from the game (in all dubs).
+                        voiced audio files from the game (in all dubs). not sure
+                        about all the sources yet, so here is an ordered list.
                     </p>
-                    <h4>Quests</h4>
-                    <p>dialogue</p>
-                    <h4>Items</h4>
-                    <p>descriptions</p>
-                    <h4>Voicelines</h4>
-                    <p>audio</p>
-                    <h4>Cutscenes</h4>
-                    <p>video</p>
+                    <ol>
+                        <li>Quests</li>
+                        <li>Items</li>
+                        <li>Voicelines</li>
+                        <li>Cutscenes</li>
+                    </ol>
                 </section>
 
                 <section>
