@@ -14,7 +14,7 @@
         <meta name="keywords" content="word, words, wordss" />
         <meta name="author" content="github.com/oatmeeru" />
         <!-- <link href="styles/main.css" rel="stylesheet" /> -->
-        <link href="images/favicon.ico" rel="icon" />
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
         <base href="https:://gi.octobaby.moe/" />
         <style>
             .goldenrod {
@@ -92,16 +92,17 @@
                     </p>
 
                     <aside>
-                        i'm gonna insert a lot of filler text throughout because
-                        so that i can spread out the use of html tags, but that
-                        doesn't mean that this is what i want the site to
-                        eventually have.
+                        i'm gonna insert a lot of <del>filler</del>
+                        <ins>placeholder</ins> text throughout because so that i
+                        can spread out the use of html tags, but that doesn't
+                        mean that this is what i want the site to eventually
+                        have.
                     </aside>
                 </section>
 
                 <section class="img">
                     <img
-                        src="images/octobaby.png"
+                        src="/images/octobaby.png"
                         alt="itty bitty octobaby"
                         height="256"
                         width="256"
@@ -125,7 +126,7 @@
                     <p>text</p>
 
                     <h3>
-                        <li><a href="./user-fetch.html"> Game Data </a></li>
+                        <li><a href="./user-fetch.html"> User Fetch </a></li>
                     </h3>
                     <p>
                         this part of the site will be dynamically fetched by the
@@ -142,6 +143,54 @@
                         to use the enka api to be able to do stuff like this
                         <li><a href="https://enka.network/">home</a></li>
                     </p>
+                    <p>
+                        i retrieve the response from my api calls as a
+                        <code>.json</code> file and parse it. here is some
+                        example code i have written in my backend for this
+                        project.
+                    </p>
+                    <pre>
+                        <code>
+async function parseBuilds(uid: number, builds: any) {
+    const parsedBuilds = await Promise.all(
+        builds.map(async (b: any) => {
+            return {
+                u_id: uid,
+                c_id: b.attributes.c_id,
+                w_id: b.weapon.w_id,
+                a1_flower: await parseArtifact(uid, b.artifacts[0]),
+                a2_feather: await parseArtifact(uid, b.artifacts[1]),
+                a3_sands: await parseArtifact(uid, b.artifacts[2]),
+                a4_goblet: await parseArtifact(uid, b.artifacts[3]),
+                a5_circlet: await parseArtifact(uid, b.artifacts[4]),
+            };
+        })
+    );
+
+    for (let i = 0; i < parsedBuilds.length; i++) {
+        await dbInsertUserBuild(parsedBuilds[i]);
+    }
+}
+
+async function parseArtifact(uid: number, artifact: any) {
+    const parsedArtifact = {
+        u_id: uid,
+        a_id: artifact.a_id,
+        mainstat: {
+            prop: artifact.mainstat.prop,
+            value: artifact.mainstat.value,
+        },
+        substats: artifact.substats.map((substat: any) => ({
+            prop: substat.prop,
+            value: substat.value,
+        })),
+    };
+
+    const userArtifactId = await dbInsertUserArtifact(parsedArtifact);
+    return userArtifactId;
+}
+                        </code>
+                    </pre>
                     <h4>Wishes</h4>
                     <p>
                         it's possible to use a powershell command to retrieve
@@ -156,7 +205,9 @@
                     </p>
 
                     <h3>
-                        <li><a href="./lore-content.html"> Game Data </a></li>
+                        <li>
+                            <a href="./lore-content.html"> Lore Content </a>
+                        </li>
                     </h3>
                     <p>
                         this part of the site will give the user a way to access
