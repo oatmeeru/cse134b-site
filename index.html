@@ -17,9 +17,9 @@
         <link href="images/favicon.ico" rel="icon" />
         <base href="https:://gi.octobaby.moe/" />
         <style>
-            .internalExample {
-                background-color: yellow;
-                font-style: italic;
+            .goldenrod {
+                background-color: goldenrod;
+                font-style: bold;
             }
         </style>
         <!-- <script src=""script.js""></script> -->
@@ -32,7 +32,7 @@
     </head>
 
     <body id="top">
-        <header></header>
+        <header>
             <h1>Itty Bitty Octobaby</h1>
             <nav id="navbar">
                 <ul>
@@ -55,12 +55,7 @@
             <article>
                 <header>
                     <h2>Home</h2>
-                    <p>
-                        i'm gonna insert a lot of filler text throughout because
-                        so that i can spread out the use of html tags, but that
-                        doesn't mean that this is what i want the site to
-                        eventually have.
-                    </p>
+                    <p>text</p>
                 </header>
                 <hr />
                 <section>
@@ -78,14 +73,30 @@
                     <blockquote>
                         This marvelous marine creature can resonate with the
                         tune played by the Washer Octopus. It will enter a
-                        <b>resonant state</b> when continuously affected by
-                        music. Use the power of the "symphony" to change the
-                        movement state of the Washer Octopus such that it can
-                        affect a nearby Resonant Anemone.
+                        <span class="goldenrod">resonant state</span> when
+                        continuously affected by music. Use the power of the
+                        "symphony" to change the movement state of the Washer
+                        Octopus such that it can affect a nearby Resonant
+                        Anemone.
                         <cite
-                            ><i>Adventure Tutorials - Washer Octopus</i>
+                            ><i>Adventure Tutorials - <b>Washer Octopus</b></i>
                         </cite>
                     </blockquote>
+
+                    <p>
+                        i started this personal project with just the backend
+                        (api calls and database) and i haven't done anything
+                        with the frontend. for this class, i'm just gonna use
+                        this site idea as a way to learn frontend, not sure
+                        (probably won't) ever connect this to my backend.
+                    </p>
+
+                    <aside>
+                        i'm gonna insert a lot of filler text throughout because
+                        so that i can spread out the use of html tags, but that
+                        doesn't mean that this is what i want the site to
+                        eventually have.
+                    </aside>
                 </section>
 
                 <section class="img">
@@ -99,40 +110,68 @@
 
                 <section>
                     <h3>
-                        <a
-                            href="https://html.spec.whatwg.org/multipage/syntax.html#comments"
-                        >
-                            Comments
-                        </a>
+                        <li><a href="./game-data.html"> Game Data </a></li>
                     </h3>
-                    <p class="syntax">
-                        HTML comments are the form of
-                        <code>&lt;!-- an HTML comment --&gt;</code>.
+                    <p>
+                        this part of the site will display a bunch of static
+                        information about characters, weapons, and artifacts
+                        (another type of of 'equipment').
                     </p>
-                    <!-- an HTML comment -->
-                    <p class="warning">
-                        With HTML comments be careful with embedding the -, !,
-                        &gt; and &lt; characters.
+                    <h4>Characters</h4>
+                    <p>text</p>
+                    <h4>Weapons</h4>
+                    <p>text</p>
+                    <h4>Artifacts</h4>
+                    <p>text</p>
+
+                    <h3>
+                        <li><a href="./user-fetch.html"> Game Data </a></li>
+                    </h3>
+                    <p>
+                        this part of the site will be dynamically fetched by the
+                        user and stored in the database. it uploads the builds
+                        of the user's characters on the character showcase. this
+                        functionality is enabled by the enka api. the first
+                        feature (builds) is one that i can implement without an
+                        account system. the second two i would need an account
+                        system, so they're lower priority for me.
                     </p>
-                    <p class="tip">
-                        HTML comments are useful for documenting features,
-                        showing authorship
+                    <h4>Builds</h4>
+                    <p>
+                        the thing that made me want to do this project. i want
+                        to use the enka api to be able to do stuff like this
+                        <li><a href="https://enka.network/">home</a></li>
                     </p>
-                    <p class="warning">
-                        HTML comments are seen by anyone who looks at the page
-                        source as such page authors are warned to avoid putting
-                        sensitive information in them or to strip the comments
-                        during a
-                        <a href="">minification</a> process.
+                    <h4>Wishes</h4>
+                    <p>
+                        it's possible to use a powershell command to retrieve
+                        the wish data. i would want to learn how to parse it and
+                        store it attached to the user, storing it on their
+                        account.
                     </p>
-                    <p class="tip">
-                        HTML comments can be used to insert content that is
-                        inert and have it extracted using JavaScript. The use of
-                        <code>data-*</code> attributes, a
-                        <code>template</code> element or string literals or
-                        other data format within a <code>script</code> block is
-                        a preferred way to embed such data payloads.
+                    <h4>Achievements</h4>
+                    <p>
+                        most likely a page of checkboxes that will be logged in
+                        the backend somewhere. not sure about this one.
                     </p>
+
+                    <h3>
+                        <li><a href="./lore-content.html"> Game Data </a></li>
+                    </h3>
+                    <p>
+                        this part of the site will give the user a way to access
+                        quest logs and item descriptions (the flavor text part).
+                        additionally, if possible, i want to use it to store the
+                        voiced audio files from the game (in all dubs).
+                    </p>
+                    <h4>Quests</h4>
+                    <p>dialogue</p>
+                    <h4>Items</h4>
+                    <p>descriptions</p>
+                    <h4>Voicelines</h4>
+                    <p>audio</p>
+                    <h4>Cutscenes</h4>
+                    <p>video</p>
                 </section>
 
                 <section>
