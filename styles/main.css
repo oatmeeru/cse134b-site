@@ -1,6 +1,6 @@
 /* main.css */
 
-html,
+/* html,
 body {
   background-color: lightblue;
 }
@@ -21,10 +21,10 @@ body {
   font-style: italic;
   font-weight: 400;
   src: url("../fonts/Literata/static/Literata-Italic.ttf") format("truetype");
-}
+} */
 
 /****** header ******/
-header {
+/* header {
   background-image: url("../images/bg_homepage.jpg");
   background-color: #fcfcdc;
   text-align: center;
@@ -35,10 +35,10 @@ header {
 
 header hr {
   width: 30%;
-}
+} */
 
 /****** main content ******/
-img{
+/* img{
   margin: 10px;
 }
 
@@ -64,11 +64,10 @@ a:link { color: #3366BB; }
 a:visited { color: #663366 }
 a:visited:hover { color: #0b0080; }
 a:hover { color: gray; }
-a:active { background-color: yellow; border: 4px solid red;}
-
+a:active { background-color: yellow; border: 4px solid red;} */
 
 /****** footer ******/
-footer {
+/* footer {
   font-size: small;
   text-align: center;
-}
+}  */
