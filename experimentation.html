@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- htmlhead.dev -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <title>Itty Bitty Octobaby</title>
+
+        <meta
+            name="description"
+            content="BORN TO INK, OCEAN IS A SPLASH, 蛸 Cuttle them all 1797, I am cute cephalopod, 410,757,864,530 TENTACLES"
+        />
+        <meta name="keywords" content="word, words, wordss" />
+        <meta name="author" content="github.com/oatmeeru" />
+        <!-- <link href="styles/main.css" rel="stylesheet" /> -->
+        <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+        <base href="https:://gi.octobaby.moe/" />
+        <style>
+            .goldenrod {
+                background-color: goldenrod;
+                font-style: bold;
+            }
+        </style>
+        <!-- <script src=""script.js""></script> -->
+        <script>
+            // functions
+        </script>
+        <noscript>
+            <!-- no js alternative -->
+        </noscript>
+    </head>
+
+    <body id="top">
+        <header>
+            <nav id="navbar">
+                <ul>
+                    <li><a href="./index.html">home</a></li>
+                    <li><a href="./game-data.html">game data</a></li>
+                    <li><a href="./user-fetch.html">user fetch</a></li>
+                    <li><a href="./lore-content.html">lore content</a></li>
+                    <li><a href="./contact.html">contact</a></li>
+                    <li><a href="./credits.html">credits</a></li>
+                </ul>
+            </nav>
+        </header>
+        <hr />
+        <main>
+            <h2>Experimentation</h2>
+            <div>
+                <dl>
+                    <dt>&lt;template&gt;</dt>
+                    <dd>
+                        hold some content htat will be hidden when the page
+                        loads. use javascript to display it.
+                    </dd>
+                    <dt>&lt;canvas&gt;</dt>
+                    <dd>draws graphics</dd>
+                    <dt>&lt;svg&gt;</dt>
+                    <dd>also draws graphics</dd>
+                    <dt>&lt;dialog&gt;</dt>
+                    <dd>dialog box</dd>
+                    <dt>&lt;picture&gt;</dt>
+                    <dd>picture element</dd>
+                    <dt>&lt;iframe&gt;</dt>
+                    <dd>inline frame</dd>
+                    <dt>&lt;abbr&gt;</dt>
+                    <dd>abbreviation</dd>
+                    <dt>&lt;dfn&gt;</dt>
+                    <dd>definition</dd>
+                    <dt>&lt;kbd&gt;</dt>
+                    <dd>keyboard</dd>
+                </dl>
+            </div>
+            <script>
+                class HelloWorld extends HTMLElement {
+                    constructor() {
+                        super();
+                        console.log("Hello World");
+                    }
+                }
+
+                customElements.define("hello-wc", HelloWorld);
+            </script>
+            <noscript> no js </noscript>
+
+            <hello-wc>hello-wc</hello-wc>
+            <div>
+                <fieldset>
+                    <legend>Character Information</legend>
+                    <label for="region"> Region: </label>
+                    <select name="region" id="region">
+                        <optgroup label="Teyvat">
+                            <option value="mondstadt">Mondstadt</option>
+                            <option value="liyue">Liyue</option>
+                            <option value="inazuma">Inazuma</option>
+                            <option value="sumeru">Sumeru</option>
+                            <option value="fontaine">Fontaine</option>
+                            <option value="natlan">Natlan</option>
+                            <option value="snezhnaya">Snezhnaya</option>
+                        </optgroup>
+                        <optgroup label="Other">
+                            <option value="abyss">Abyss</option>
+                            <option value="celestia">Celestia</option>
+                            <option value="khaenriah">Khaenriah</option>
+                            <option value="unknown">Unknown</option>
+                        </optgroup>
+                    </select>
+                    <br />
+                    <label for="element"> Element: </label>
+                    <input list="element-list" name="element" id="element" />
+                    <datalist id="element-list">
+                        <option value="anemo"></option>
+                        <option value="geo"></option>
+                        <option value="electro"></option>
+                        <option value="dendro"></option>
+                        <option value="hydro"></option>
+                        <option value="pyro"></option>
+                        <option value="cryo"></option>
+                    </datalist>
+                    <br />
+                    <label for="comment"> this is a textfield: </label><br />
+                    <textarea
+                        rows="4"
+                        cols="50"
+                        id="comment"
+                        name="comment"
+                        placeholder="textfield..."
+                    ></textarea>
+                </fieldset>
+            </div>
+        </main>
+        <hr />
+        <footer id="foot">
+            <p>placeholder footer</p>
+            <address id="address_element">
+                Something<br />
+                Somewhere<br />
+                Sea of Bygone Eras, Fontaine<br />
+                ...<br />
+            </address>
+        </footer>
+    </body>
+</html>
