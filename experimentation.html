@@ -193,6 +193,31 @@
             </div>
 
             <div>
+                <canvas id="myCanvas" width="200" height="200"
+                    >a red-ish heart in a black square</canvas
+                >
+
+                <script>
+                    const canvas = document.getElementById("myCanvas");
+                    const ctx = canvas.getContext("2d");
+
+                    // square
+                    ctx.fillStyle = "#262626";
+                    ctx.fillRect(20, 20, 160, 160);
+
+                    // heart
+                    ctx.fillStyle = "#EF5074";
+                    ctx.beginPath();
+                    ctx.moveTo(100, 60);
+                    ctx.bezierCurveTo(80, 20, 40, 20, 40, 60);
+                    ctx.bezierCurveTo(40, 90, 80, 120, 100, 140);
+                    ctx.bezierCurveTo(120, 120, 160, 90, 160, 60);
+                    ctx.bezierCurveTo(160, 20, 120, 20, 100, 60);
+                    ctx.fill();
+                </script>
+            </div>
+
+            <div>
                 <p>MathML extra credit here</p>
                 <math>
                     <mrow>
@@ -219,7 +244,7 @@
             </div>
 
             <div>
-                <h2>Westeros</h2>
+                <h2>Westeros (this is an svg!)</h2>
                 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
                 <svg
                     xmlns:dc="http://purl.org/dc/elements/1.1/"
